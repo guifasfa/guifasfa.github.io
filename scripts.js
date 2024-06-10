@@ -1,6 +1,3 @@
-
-
-
 let item = 0;
 const max = 79;
 
