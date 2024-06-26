@@ -69,7 +69,13 @@ body {
 }
 
 .Projetos .animacao img{
-    display: flex;
-    height: 100px;
-    left: 50px;
+ height: 175px;
+}
+
+.Projetos .jornal img{
+    height: 133px;
+}
+
+.Projetos .Formulário img{
+    height: 180px;
 }
