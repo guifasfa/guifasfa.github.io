@@ -67,3 +67,8 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+.Projetos .animacao img{
+    height: 200px;
+    left: 50px;
+}
