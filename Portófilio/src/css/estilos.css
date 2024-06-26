@@ -1,0 +1,160 @@
+body {
+    background-image: url(../Midia/fundo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: 'VT323', monospace;
+    color: #f3f3f3;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+/*  */
+}
+
+.cartao{
+    background-color: rgb(9, 9, 31);
+    width: 370px;
+    border: 2px solid #2b0a0a60;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cartao .minhas-informacoes{
+    padding-top: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+/*Quando muda a direção do flex, ele muda o eixo de alinhamento*/
+/*De origem, ele alinha horizontalmente, como mudamos a direção, agora é horizontalmente*/
+}
+
+.cartao .minhas-informacoes img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50px;
+    border: 4px solid rgb(0, 0, 0);
+}
+
+.cartao .minhas-informacoes .nome{
+    font-size: 26px;
+}
+
+.cartao .minhas-informacoes .cargo {
+    font-size: 20px;
+    color: #b8bbc5;
+}
+
+.cartao .conteudo{
+    margin-top: 15px;
+}
+
+.cartao .abas img{
+    width: 30px;
+}
+.cartao .abas{
+    display: flex;
+}
+.cartao .abas .aba{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+/* Essa propriedade 'trasition' serve para dar um efeito de transição */
+}
+
+.cartao .abas .aba.selecionada{
+/* Quando precisa|^|selecionar uma tag com duas classes, não se da espaço entre os seletores */
+/* Comumente utilizada para estilizar tags muito específicas */
+/* Essa tag recebe uma classe como representação para dizer que quando carregar, virá selecionada */
+    background-color: #070000;
+}
+
+.abas .aba.selecionada img{
+    border-radius: 70px;
+    
+}
+
+.cartao .informacoes-abas{
+    background-color: #070000;
+}
+
+.cartao .abas .aba:hover{
+/* Esse 'hover' é uma pseudo classe, utilizada para estilizar */
+/* Aqui está sendo usada para passar a ideia de interação com o usuário */
+    background: #1a0202a4;
+}
+
+.informacoes-abas .informacao{
+    min-height: 260px;
+    padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .informacao.selecionada{
+    display: block;
+}
+
+.informacoes-abas .sub-titulo{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.informacoes-abas .descricao{
+    font-size: 20px;
+    max-height: 180px;
+    padding-right: 15px;
+    overflow-y: auto;
+/* O overflow auto, ira gerar um scroll, permitindo um tamanho fixo, mesmo com textos extensos */
+}
+
+.informacoes-abas .descricao span{
+    color: #d07002;
+    text-align: center;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 180px;
+    overflow-y: auto;
+    overflow:hidden;
+}
+
+.redes-sociais li a{
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+.redes-sociais li a:hover{
+    opacity: 0.7;
+}
+
+.redes-sociais .Gmail{
+    background-color: #6d5050;
+}
+
+.redes-sociais .Gmail{
+    background-color: #6d5050;
+}
+
+.redes-sociais .Projetos{
+    background-color: #490d0d;
+}
+
+.redes-sociais .GitHub{
+    background-color: #545454;
+}
