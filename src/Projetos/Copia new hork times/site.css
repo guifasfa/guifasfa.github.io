@@ -1,0 +1,261 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.barrain hr{
+    width: 1250px;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+
+}
+
+.barraver hr{
+    height:430px;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.barra hr{
+    width: 1250px;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+
+.text img{
+    width: 400px;
+    height: 400px;
+}
+
+.v {
+    display: flex;
+    flex-direction: column;
+}
+
+.text{
+    width: 900px;
+    height: 440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lateral{
+    width: 350px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia{
+    width: 1250px;
+    height: 440px;
+    display: flex;
+    flex-direction: row;
+}
+
+.b {
+    display: flex;
+    flex-direction: row;
+}
+
+.a {
+    width: 1250px;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1250px;
+    height: 37px;
+}
+
+.texcolor {
+    width: 450px;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: italic, bold, bold italic, condensed, condensed italic, bold condensed;
+}
+
+h4 {
+    background-color: rgb(0, 102, 255);
+    color: white;
+    border-radius: 6px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: gray;
+    padding: 10px;
+}
+
+.texto {
+    width: 500px;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+
+.título{
+    width: 1250px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div img {
+    width: 35px;
+    height: 35px;
+}
+
+.lateral img {
+    width: 250px;
+    height: 250px;
+}
+
+.título img{
+    display: none;
+}
+
+.oculto {
+    display: none;
+}
+
+@media screen and (max-width: 1200px){ 
+    
+    header {
+        display: none;
+    }
+
+.título {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 414px;
+    height: 40px
+}
+
+.título h6{
+    display: none;
+}
+
+.título h5{
+    display: none;
+}
+
+.barra {
+    display: none;
+}
+
+.a {
+    display: none;
+}
+
+.título h1 {
+    font-size: 25px;
+}
+
+.usuario img{
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.pontos img{
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.oculto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:aliceblue;
+    width: 414px;
+}
+
+.noticia {
+    width: 414px;
+    height: 1000px;
+    flex-direction: column;
+}
+
+.text {
+    width: 414px;
+    height: 896px;
+    flex-direction: column;
+}
+
+.v {
+    width: 414px;
+    height: 250px;
+}
+
+.v h2 {
+    font-size: 25px;
+}
+
+.v p{
+    font-size: 21px;
+}
+
+.barraver {
+    width: 413px;
+    height: 1px;
+    border-width: 16px;
+}
+
+.barrain {
+    display: none;
+}
+
+.lateral {
+    width: 414px;
+    height: 400px;
+}
+
+.lateral img{
+    display: flex;
+    width: 400px;
+    height: 400px;
+}
+
+.lateral h2{
+    font-size: 25px;
+}
+
+.lateral p{
+    font-size: 21px;
+}
+
+}

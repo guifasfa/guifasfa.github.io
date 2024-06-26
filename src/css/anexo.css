@@ -1,0 +1,69 @@
+body {
+    background-image: url(../Midia/fundo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: 'VT323', monospace;
+    color: #f3f3f3;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+/*  */
+}
+
+.animacao .animar{
+    background-color: #6d5050;
+}
+
+.jornal .New{
+    background-color: #6d5050;
+}
+
+.Projetos .forme{
+    background-color: #6d5050;
+}
+
+.Projetos{
+    width: 1000px;
+}
+
+.Projetos .animacao{
+    background-color: rgb(9, 9, 31);
+    border: 2px solid #3d0b0b60;
+    border-radius: 10px;
+    overflow: hidden;
+
+    padding-top: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.Projetos .jornal{
+    background-color: rgb(9, 9, 31);
+    border: 2px solid #3d0b0b60;
+    border-radius: 10px;
+    overflow: hidden;
+
+    padding-top: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.Projetos .Formulário{
+    background-color: rgb(9, 9, 31);
+    border: 2px solid #3d0b0b60;
+    border-radius: 10px;
+    overflow: hidden;
+
+    padding-top: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}

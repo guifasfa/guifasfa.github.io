@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Animação jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        .caixa {
+            border: 1px solid #000;
+            width: 200px;
+            height: 200px;
+            background-color: #aaa;
+            position: absolute;
+            left: 0px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caixa" class="caixa">
+        <h3>Caixa para animar</h3>
+        <p>texto dentro da caixa</p>
+    </div>
+
+    <button id="bt_aumenta">Aumenta</button>
+    <button id="bt_diminuir">Diminuir</button>
+    <button id="bt_esquerda">Esquerda</button>
+    <button id="bt_direita">Direita</button>
+
+    <script>
+        $('#bt_aumenta').click(
+            function () {
+                $('#caixa').animate({ width: "500px", height: "500px" }, { duration: 200 })
+            }
+        )
+        $('#bt_diminuir').click(
+            function () {
+                $('#caixa').animate({ width: "200px" }, { duration: 200 }).animate({ height: "200px" }, { duration: 200 })
+            }
+        )
+        $('#bt_esquerda').click(
+            function () {
+                $('#caixa').animate({ left: "500px" }, { duration: 1000, complete: () => { alert('terminou o movimento') } })
+            }
+        )
+        $('#bt_direita').click(
+            function () {
+                $('#caixa').animate({ left: "0px" }, { duration: 1000 })
+            }
+        )
+    </script>
+
+</body>
+
+</html>

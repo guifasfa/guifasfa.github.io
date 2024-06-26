@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="formulário.js" defer></script>
+</head>
+
+<body>
+    <form action="javascript:alert('Formuário aprovado para envio')" method="post" id="formcad">
+        <p>Dados do Funcionário</p>
+
+        <label for="uid">Nome*</label>
+        <input type="text" name="uid" id="uid" required pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
+
+        <label for="tel">Telefone</label>
+        <input type="tel" name="tel" id="tel" minlength="14" maxlength="15">
+
+        <label for="email">E-mail*</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="emailconf">Confimação do E-mail*</label>
+        <input type="email" name="emailconf" id="emailconf" required>
+
+        <label for="pwd">Código do Funcionário</label>
+        <input type="password" name="pwd" id="pwd" required pattern="[0-9]+$">
+
+        <label for="pwd2">Corfimação do Código</label>
+        <input type="password" name="pwd2" id="pwd2" required>
+
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf" required minlength="14" maxlength="14">
+
+        <label for="nasc">Data de nascimento*</label>
+        <input type="date" name="nasc" id="nasc" required>
+
+        <label>Gênero</label>
+        <label for="gen">Masculino
+            <input type="radio" name="gen" id="masc" value="masc">
+        </label>
+        <label for="gen">Feminino
+            <input type="radio" name="gen" id="fem" value="fem">
+        </label>
+        <label for="gen">Outro
+            <input type="radio" name="gen" id="out" value="out">
+        </label>
+
+        <label for="lic">Aceito os <br>
+            Termos de serviço e a<br>
+            Política de privacidade*</label>
+        <input type="checkbox" name="lic" id="lic" required>
+
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
