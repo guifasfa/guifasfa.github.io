@@ -16,6 +16,11 @@ body {
 /*  */
 }
 
+.Projetos.volta img{
+width: 20px;
+height: 20px;
+}
+
 .Projetos .volta{
     display: flex;
     position: sticky;
