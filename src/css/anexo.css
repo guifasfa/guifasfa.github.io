@@ -157,6 +157,18 @@ height: 20px;
     align-items: center;
 }
 
+.Projetos .Jogo img{
+    height: 250px;
+}
+
+.Projetos .Copia img{
+    height: 138px;
+}
+
+.Projetos .Chat img{
+    height: 94px;
+}
+
 .Projetos .animacao img{
  height: 175px;
 }
@@ -167,4 +179,35 @@ height: 20px;
 
 .Projetos .Formulário img{
     height: 180px;
+}
+
+@media screen and (max-width: 1200px){ 
+.Projetos {
+    width: 414px;
+}
+
+.Projetos .Jogo img{
+    height: 100px;
+}
+
+.Projetos .Copia img{
+    height: 57px;
+}
+
+.Projetos .Chat img{
+    height: 39px;
+}
+
+.Projetos .animacao img{
+ height: 72px;
+}
+
+.Projetos .jornal img{
+    height: 55px;
+}
+
+.Projetos .Formulário img{
+    height: 72px;
+}
+
 }
