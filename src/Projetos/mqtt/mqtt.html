@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecção MQTT</title>
+</head>
+
+
+<style>
+    #resposta{
+        width: 1300px;
+        height: 500px;
+        overflow-y: scroll;
+        background-color: grey;
+
+    }
+</style>
+
+
+<body>
+    apelido: <input type="text"  id="apelido" size="6">
+    Mensagem: <input type="text"  id="texto" size="50">
+    <button onclick="Enviar();">OK</button>
+    <button onclick="EnviarBeijo();">Beijo</button>
+    <br> <br>
+
+    <button onclick="Ligar();">Ligar</button>
+    <button onclick="Desligar();">Desligar</button>
+
+    <button onclick="LigarVerde();">Ligar Verde</button>
+    <button onclick="DesligarVerde();">Desligar Verde</button>
+
+    <div id="resposta"></div>
+
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js"></script>
+
+
+
+
+
+<img src="20px" width="20px">
+
+
+</body>
+
+
+<script>
+
+
+
+// cedup/texto
+// cria o tópico (variavel) que será acessado pelos PCs
+// todo PC que Usar este Tópico conseguirá receber as Mensagens
+topico = "cedup/texto";
+
+
+//cria um cliente para se conectar ao servidor MQTT na porta 8000
+
+client = new Paho.MQTT.Client("broker.hivemq.com", Number(7000), "")
+client.connect({onSuccess:Conectou})
+
+function Conectou(){
+    //envia o tópico (variável) lida por todos os computadores
+
+    client.subscribe(topico)
+    message = new Paho.MQTT.Message('')
+    message.destinationName = topico
+}
+
+
+//Criando as funções: Conexao_Perdida e Mensagem_Chegou
+
+
+client.onConnectionLost = Conexao_perdida
+client.onMessageArrived = Mensagem_Chegou
+
+
+
+//Se perder a conexao será executada essa função:
+
+function Conexao_perdida(responseObject) {
+    if(responseObject.errorCode !== 0){
+        resposta.innerHTML += "Desconectado: " + responseObject.errorMessage
+    }
+    
+}
+
+
+
+// sempre que alguem atualizar o topico cedup/texto esta função é executada
+
+
+function Mensagem_Chegou(message){
+    resposta.innerHTML += "<br>"
+    resposta.innerHTML += message.payloadString
+}
+
+
+
+
+function Enviar(){
+    valor = apelido.value + ": " + texto.value
+    message = new Paho.MQTT.Message(valor)
+    message.destinationName = topico
+    client.send(message)
+}
+
+
+function Ligar(){
+    valor = "on"
+    message = new Paho.MQTT.Message(valor)
+    message.destinationName = topico
+    client.send(message)
+}
+
+function Desligar(){
+    valor = "off"
+    message = new Paho.MQTT.Message(valor)
+    message.destinationName = topico
+    client.send(message)
+}
+
+function LigarVerde(){
+    valor = "ligar_verde"
+    message = new Paho.MQTT.Message(valor)
+    message.destinationName = topico
+    client.send(message)
+}
+
+function DesligarVerde(){
+    valor = "desligar_verde"
+    message = new Paho.MQTT.Message(valor)
+    message.destinationName = topico
+    client.send(message)
+}
+
+function EnviarBeijo(){
+    valor = apelido.value + ": " + "<img src='' width='100px'>"
+    message = new Paho.MQTT.Message(valor)
+    message.destinationName = topico
+    client.send(message)
+}
+
+
+
+</script>
+
+</html>
